@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Agbalumo', serif;
+   
+}
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+html ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+#navbar {
+    background-color: #110701;
+    font-size: 23px;
+}
+
+#logo img {
+    border-radius: 10px;
+    width: 160px;
+    height: 65px;
+    margin-left: 10px;
+}
+
+.navbar-nav {
+    margin-left: 50px;
+}
+
+.nav-item .nav-link {
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-item .nav-link:hover {
+    background-color: #f7f5f2;
+    transition: 0.2s;
+    border-radius: 5px;
+    color: black;
+}
+
+#navbar .form button {
+    background: white;
+    color: black;
+   border-radius: 12px;
+}
+#navbar .form{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#home {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/Espresso-machine-working-with-bar-interior-background.jpeg);
+    background-size: cover;
+    background-position: 60%;
+}
+
+#home .content {
+    padding-top: 210px;
+    margin-left: 56px;
+}
+
+#home .content h3 {
+    font-size: 50px;
+    color: white;
+}
+.input-field label {
+    color: #666666;
+    margin-left: 8px;
+    font-size: 0.9em;
+  }
+.input-field input {
+    width: 100%;
+    height: 40px;
+    margin-left: 5px;
+    background: transparent;
+    border: 1px solid darkgray;
+    border-radius: 12px;
+    font-size: 1em;
+    color: black;
+  }
+#home .content p {
+    margin-top: 10px;
+    color: white;
+}
+
+#btn {
+    width: 150px;
+    height: 36px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.user:hover {
+    background-color: #f7f5f2;
+    transition: 0.2s;
+    border-radius: 5px;
+    color: black;
+}
+
+#btn:hover {
+    background: #110701;
+    color: white;
+    transition: 0.2s;
+}
+ .user{
+    color: #fff;
+}
+
+#about {
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+}
+
+#about .container {
+    padding-top: 70px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.heading span {
+    color: #b2744c;
+}
+
+#about .card img {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+#about .card {
+    border-radius: 10px;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#brand {
+    height: 50vh;
+}
+
+#brand h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: #110701;
+}
+
+#brand h2 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+    color: #b2744c;
+}
+#brand .row img{
+    margin: 15px;
+
+}
+
+/* MENU */
+
+
+.menu .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu .box-container .box {
+    flex: 1 1 42rem;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 6rem;
+}
+
+.menu .box-container .box:hover {
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+.menu .box-container .box img {
+    height: 8rem;
+    margin-left: -6rem;
+}
+
+.menu .box-container .box .content h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    line-height: 1.8;
+}
+
+.menu .box-container .box .content p {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--main-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .content span {
+    font-size: 2rem;
+    color: var(--main-color);
+    line-height: 1.8;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu .box-container {
+        justify-content: flex-start;
+    }
+
+    .menu .box-container .box {
+        flex: 1 1 calc(33.333% - 2rem);
+        margin-left: 0;
+    }
+    
+    .menu .box-container .box img {
+        height: 6rem;
+        margin-left: 0;
+    }
+    
+}
+.row img {
+    width: 300px;
+   
+}
+
+
+
+#product h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#product span {
+    color: #b2744c;
+}
+
+.products {
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    margin: 50px auto;
+    width: 100%;
+    grid-gap: 50px;
+    padding: 20px;
+}
+
+
+.product {
+
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 300px;
+    height: 250px;
+
+}
+
+.product .title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product .description {
+    padding: 0 20px 20px 20px;
+    line-height: 22px;
+}
+
+.product .price {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    color: #9b0b03;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.product .cart {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    background-color: #3e628f;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.product .cart i {
+    padding-left: 10px;
+}
+form{
+    border-radius: 10px;
+}
+#contact .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #contact .container .map {
+    flex: 1 1 45rem;
+    object-fit: cover;
+    width: 100%;
+    padding: 50px;
+  }
+  #contact h1{
+    text-align: center;
+  }
+  #contact .container form {
+    flex: 1 1 45rem;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+  
+  #contact .container form h3 {
+    text-transform: uppercase;
+    font-size: 35px;
+   
+  }
+  
+  #contact .container form .input-box {
+    display: flex;
+    color: #110701;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 40px;
+  }
+  
+  #contact .container form .input-box span {
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  #contact .container form .input-box input {
+    width: 100%;
+    background: none;
+    text-transform: none;
+    padding: 1rem;
+    font-size: 20px;
+    border: none;
+    color: black;
+  }
+  
+  #contact .container form .button {
+    padding: 10px 30px;
+    text-transform: capitalize;
+    border: none;
+    font-size: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  #contact .container form .button:hover {
+    letter-spacing: 2px;
+  }
+  
+  /* end contact  */
+  .footer {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer .container {
+    background-color: #13131a;
+    text-align: center;
+ max-width: 1550px;
+  }
+  
+  .footer .container .icons {
+    padding: 20px 0;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .footer .container .icons a {
+    font-size: 20px;
+    color: #fff;
+   list-style: none;
+   text-decoration: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+  }
+  
+ 
+  
+  .footer .container .links {
+    padding: 20px 0;
+    line-height: 3;
+  }
+  
+  .footer .container .links a {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 20px;
+   
+    margin: 0 5px;
+  }
+  
+  
+  
+  .footer .container .created {
+    padding: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: lighter;
+  }
+  
+  .footer .container .created span {
+    
+    font-weight: lighter;
+  }
+  
+  /* end footer  */
+ 
+
+
+/* Responsive styling for screens up to 982px */
+@media screen and (max-width: 982px) {
+    #about p {
+        font-size: 13px;
+    }
+  div .col-md-6{
+    width: 80%;
+  }
+    #about {
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+    }
+    
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #contact .container .map {
+        flex: 1 1 45rem;
+        object-fit: cover;
+        width: 380px;
+        padding-left: 20px;
+    }
+
+    #brand {
+        height: 120vh;
+    }
+
+    #contact .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .col-md-6 .card img {
+        border-radius: 10px;
+        width: 100%;
+        height: 300px;
+    }
+
+    #brand h2 {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: #b2744c;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 50px auto;
+        grid-gap: 50px;
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width: 512px) {
+    #about p {
+        font-size: 15px;
+    }
+    
+    #home {
+        width: 100%;
+        height: 120vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/Espresso-machine-working-with-bar-interior-background.jpeg);
+        background-size: cover;
+        background-position: 60%;
+    }
+    .products {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about {
+        height: 110vh;
+    }
+
+    #brand {
+        height: 130vh;
+    }
+}
+
+/* Additional responsive tyling for screens up to 400px */
+@media screen and (max-width: 370px) {
+    #menu {
+        height: 650vh;
+    }
+    #about {
+        height: 130vh;
+    }
+}
+@media (min-width: 371px) and (max-width: 395px) {
+    
+    #about {
+        height: 130vh;
+    }
+}
+
