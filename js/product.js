@@ -174,7 +174,7 @@ function sendProductsToWhatsApp() {
   }
 
   const encodedMessage = encodeURIComponent(whatsappMessage);
-  const whatsappLink = `https://wa.me/01097315496?text=${encodedMessage}`;
+  const whatsappLink = `https://wa.me/+201097315496?text=${encodedMessage}`;
 
   window.open(whatsappLink);
 }
