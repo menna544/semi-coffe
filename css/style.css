@@ -153,7 +153,6 @@ flex-wrap: wrap;
 .about-img{
     border-radius: 12px;
     flex: 1;
-    margin-right: 40px;
     overflow: hidden;
 }
 .about-img img{
@@ -162,8 +161,8 @@ height: auto;
 display: block;
 transition: 0.5s ease;
 }
-#about .container {
-    padding-top: 70px;
+.about-content{
+    margin-left: 9px;
 }
 
 .heading {
@@ -198,9 +197,7 @@ transition: 0.5s ease;
     margin-bottom: 40px;
     color: #110701;
 }
-#about p{
-    width: 700px;
-}
+
 #brand h2 span {
     display: flex;
     align-items: center;
