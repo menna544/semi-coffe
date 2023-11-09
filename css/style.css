@@ -136,10 +136,32 @@ html::-webkit-scrollbar {
 
 #about {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     align-items: center;
 }
-
+.row1 {
+     width: 90%;
+     margin: 0 auto;
+     padding: 10px 20px;
+}
+.about{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.about-img{
+    border-radius: 12px;
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-img img{
+max-width: 100%;
+height: auto;
+display: block;
+transition: 0.5s ease;
+}
 #about .container {
     padding-top: 70px;
 }
@@ -156,23 +178,14 @@ html::-webkit-scrollbar {
     color: #b2744c;
 }
 
-#about .card img {
-    border-radius: 10px;
-    width: 100%;
-    height: 300px;
-}
 
 #about .card {
+  width: 100%;
     border-radius: 10px;
     color: white;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+
 
 #brand {
     height: 50vh;
@@ -185,7 +198,9 @@ html::-webkit-scrollbar {
     margin-bottom: 40px;
     color: #110701;
 }
-
+#about p{
+    width: 700px;
+}
 #brand h2 span {
     display: flex;
     align-items: center;
@@ -193,10 +208,16 @@ html::-webkit-scrollbar {
     margin-left: 7px;
     color: #b2744c;
 }
-#brand .row img{
-    margin: 15px;
-
+.row{
+    overflow: hidden;
+    margin-left: 40px;
 }
+#brand .row img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    }
 
 /* MENU */
 
@@ -210,14 +231,14 @@ html::-webkit-scrollbar {
 
 .menu .box-container .box {
     flex: 1 1 42rem;
-    padding: 2rem;
     border: var(--border);
     border-radius: var(--border-radius);
     display: flex;
+    overflow: hidden;
     text-decoration: none;
     align-items: center;
-    gap: 1.5rem;
-    margin-left: 6rem;
+    justify-content: center;
+   
 }
 
 .menu .box-container .box:hover {
@@ -227,7 +248,7 @@ html::-webkit-scrollbar {
 
 .menu .box-container .box img {
     height: 8rem;
-    margin-left: -6rem;
+   
 }
 
 .menu .box-container .box .content h3 {
@@ -252,23 +273,17 @@ html::-webkit-scrollbar {
 
 /* Responsive styling for smaller screens */
 @media screen and (max-width: 768px) {
-    .menu .box-container {
-        justify-content: flex-start;
-    }
+   
 
-    .menu .box-container .box {
-        flex: 1 1 calc(33.333% - 2rem);
-        margin-left: 0;
-    }
     
     .menu .box-container .box img {
         height: 6rem;
-        margin-left: 0;
+        margin-left: 2px;
     }
     
 }
 .row img {
-    width: 300px;
+    width: 400px;
    
 }
 
@@ -352,7 +367,7 @@ form{
     flex: 1 1 45rem;
     object-fit: cover;
     width: 100%;
-    padding: 50px;
+    
   }
   #contact h1{
     text-align: center;
@@ -408,15 +423,16 @@ form{
   }
   
   /* end contact  */
-  .footer {
+  .foter {
     padding: 0;
     margin: 0;
+    width: 100%;
   }
   
-  .footer .container {
+  .foter .container {
     background-color: #13131a;
     text-align: center;
- max-width: 1550px;
+    max-width: 1440px;
   }
   
   .footer .container .icons {
@@ -426,7 +442,7 @@ form{
     list-style: none;
   }
   
-  .footer .container .icons a {
+  .foter .container .icons a {
     font-size: 20px;
     color: #fff;
    list-style: none;
@@ -440,12 +456,12 @@ form{
   
  
   
-  .footer .container .links {
+  .foter .container .links {
     padding: 20px 0;
     line-height: 3;
   }
   
-  .footer .container .links a {
+  .foter .container .links a {
     color: #fff;
     text-transform: capitalize;
     text-decoration: none;
@@ -454,10 +470,10 @@ form{
    
     margin: 0 5px;
   }
+ 
   
   
-  
-  .footer .container .created {
+  .foter .container .created {
     padding: 20px;
     font-size: 20px;
     text-transform: capitalize;
@@ -478,10 +494,9 @@ form{
 @media screen and (max-width: 982px) {
     #about p {
         font-size: 13px;
+        text-align: center;
     }
-  div .col-md-6{
-    width: 80%;
-  }
+ 
     #about {
         width: 100%;
         height: 100vh;
@@ -498,10 +513,11 @@ form{
     #contact .container .map {
         flex: 1 1 45rem;
         object-fit: cover;
-        width: 380px;
-        padding-left: 20px;
+        width: 108.11%;
     }
-
+    #contact .container form{
+        width: 130%;
+    }
     #brand {
         height: 120vh;
     }
@@ -512,11 +528,7 @@ form{
         flex-wrap: wrap;
     }
 
-    .col-md-6 .card img {
-        border-radius: 10px;
-        width: 100%;
-        height: 300px;
-    }
+    
 
     #brand h2 {
         align-items: center;
@@ -538,6 +550,7 @@ form{
 @media screen and (max-width: 512px) {
     #about p {
         font-size: 15px;
+        width: 250px;
     }
     
     #home {
@@ -569,9 +582,7 @@ form{
 
 /* Additional responsive tyling for screens up to 400px */
 @media screen and (max-width: 370px) {
-    #menu {
-        height: 650vh;
-    }
+    
     #about {
         height: 130vh;
     }
@@ -583,3 +594,11 @@ form{
     }
 }
 
+@media screen and (width: 1024px){
+    #about{
+        height: 100vh;
+    }
+    #about p{
+        width: 370px;
+    }
+}
