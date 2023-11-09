@@ -90,11 +90,17 @@ function initapp() {
 initapp();
 
 function addtocart(productId) {
+  Swal.fire({
+    title: "Good job!",
+    text: "added successfully!",
+    icon: "success",
+  });
   if (listcards[productId] == null) {
     listcards[productId] = products.find((product) => product.id === productId);
     listcards[productId].quantity = 1;
   } else {
     listcards[productId].quantity++;
+    
   }
   reloadcard();
 }
@@ -140,7 +146,11 @@ function changequantity(productId, quantity) {
 }
 function sendProductsToWhatsApp() {
   if (Object.keys(listcards).length === 0) {
-    alert("Your shopping cart is empty.");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Your cart is empty!",
+    });
     return;
   }
 
