@@ -34,15 +34,18 @@ function verifyPassword() {
 function validateAll() {
     if (validateEmail() == true && verifyPassword() == true) {
         var username = "User123";
-        sessionStorage.setItem("username", username);
-
-        // Redirect to the index.html page
+        sessionStorage.setItem("username", username);   
         location.href = "index.html";
     }
+    
 }
 
 function myFunction() {
-    alert("Account Created successfully");
+    Swal.fire({
+        title: "Good job!",
+        text: "Account creater successfully!",
+        icon: "success"
+      });;
 }
 
 function contact() {
