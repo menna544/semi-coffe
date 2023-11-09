@@ -32,9 +32,15 @@ function verifyPassword() {
 
 function validateAll() {
     if (validateEmail() == true && verifyPassword() == true) {
-        var username = "User123";
-        sessionStorage.setItem("username", username);   
-        location.href = "index.html";
+       localStorage.setItem("userEmail",emailfield.value);
+        location.href = "product.html";
+    }else{
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Enter valid Email or password!",
+            
+          });
     }
     
 }
@@ -91,12 +97,13 @@ function validateForm() {
     }
 
     if (isValid) {
+        localStorage.setItem("userEmail",emailfield.value);
         Swal.fire({
             title: "Good job!",
             text: "Account created successfully!",
             icon: "success"
           });
-          location.replace("index.html")
+          location.replace("product.html")
     }else{
         Swal.fire({
             icon: "error",
@@ -105,4 +112,11 @@ function validateForm() {
             
           });
     }
+}
+function storeUserEmail(email) {
+    localStorage.setItem("userEmail", email);
+}
+// Retrieve the user's email from local storage
+function retrieveUserEmail() {
+    return localStorage.getItem("userEmail");
 }
