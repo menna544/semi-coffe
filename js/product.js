@@ -154,7 +154,19 @@ function sendProductsToWhatsApp() {
     return;
   }
 
-  let whatsappMessage = "My Shopping Cart:\n";
+  // Retrieve the user's email from local storage
+  const userEmail = localStorage.getItem("userEmail");
+
+  if (!userEmail) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "User email not found in local storage!",
+    });
+    return;
+  }
+
+  let whatsappMessage = `My Shopping Cart for ${userEmail}:\n`;
 
   for (const productId in listcards) {
     const product = listcards[productId];
@@ -167,6 +179,11 @@ function sendProductsToWhatsApp() {
   window.open(whatsappLink);
 }
 
+
 function goback() {
   location.replace("index.html");
+}
+function logout(){
+  localStorage.removeItem("userEmail"); 
+  location.replace("signinup.html");
 }
