@@ -204,11 +204,20 @@
           emailjs.sendForm("service_kcp27mn", "template_jcxeiki", this)
     .then(function(response) {
         console.log('Sent successfully: ', response);
-        alert('Your message has been sent!');
+        Swal.fire({
+    title: "Good job!",
+    text: "message sent successfully!",
+    icon: "success",
+  });
     }, function(error) {
         console.log('Failed to send: ', error);
-        alert('An error occurred. Please try again later.');
+        Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "An error occurred. Please try again later!",
     });
+    });
+    
       });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
