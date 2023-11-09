@@ -72,7 +72,7 @@ form.sign-in-form {
     max-width: 380px;
     width: 100%;
     background-color: #f0f0f0;
-    margin: 7px 0;
+    margin: 12px 0;
     height: 45px;
     border-radius: 55px;
     display: grid;
@@ -95,7 +95,7 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 20px 0;
+  margin: 16px 0;
   height: 55px;
   border-radius: 55px;
   display: grid;
@@ -180,7 +180,24 @@ form.sign-in-form {
   display: flex;
   justify-content: center;
 }
-
+.input-field .Success input{
+  border-color: green;
+}
+.input-field .error input{
+  border-color: red;
+}
+.input-field .error{
+  color: red;
+  width: 250px;
+  font-size: 13px;
+}
+#checkbox-error{
+  color: red;
+  font-size: 15px;
+}
+#checkbox{
+  margin: 5px;
+}
 .social-icon {
   height: 46px;
   width: 46px;
@@ -213,7 +230,7 @@ form.sign-in-form {
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
-  margin-top: 20px;
+  margin-bottom: 9px;
   cursor: pointer;
   transition: 0.5s;
     font-family: "Poppins", sans-serif;
