@@ -52,46 +52,52 @@
             </a>
           </div>
         </form>
-        <form action="#" class="sign-up-form">
-          <h2 class="title">Register</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Name" required />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" required />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-phone"></i>
-            <input type="phone" placeholder="Phone" required />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="password" required />
-          </div>
-          <div>
-            <input type="checkbox" /><a href="#" class="href"> <span class="rules-text">I agree with the terms of the
-                "Buyer Agreement"</a>
-          </div>
+        
+<form action="#" id="form" class="sign-up-form">
+  <h2 class="title">Register</h2>
+  <div class="input-field">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Name" id="username" required />
+      <div class="error" id="username-error"></div>
+  </div>
+  <div class="input-field">
+      <i class="fas fa-envelope"></i>
+      <input type="email" placeholder="Email" id="email" required />
+      <div class="error" id="email-error"></div>
+  </div>
+  <div class="input-field">
+      <i class="fas fa-phone"></i>
+      <input type="tel" placeholder="Phone" id="phone" required />
+      <div class="error" id="phone-error"></div>
+  </div>
+  <div class="input-field">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Password" id="password" required />
+      <div class="error" id="password-error"></div>
+  </div>
+  <div>
+      <input type="checkbox" id="checkbox" required />
+      <label for="checkbox">I agree with the terms of the "Buyer Agreement"</label>
+      <div class="error" id="checkbox-error"></div>
+  </div>
 
-          <input type="button" class="btn" value="submit" onclick="myFunction()" />
-          <p class="social-text">you can also sign up with</p>
-          <div class="social-media">
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </form>
+  <button type="button" class="btn" onclick="validateForm()">Submit</button>
+  <p class="social-text">You can also sign up with</p>
+  <div class="social-media">
+      <a href="#" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="social-icon">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="social-icon">
+          <i class="fab fa-google"></i>
+      </a>
+      <a href="#" class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+      </a>
+  </div>
+</form>
       </div>
     </div>
 
