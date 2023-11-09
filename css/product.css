@@ -68,7 +68,13 @@ ul.listcard{
     border-radius: 12px;
    margin: 5px;
 }
-.center-container {
+div.center-container {
+    position:fixed;
+    bottom: 0;
+    left: 45%;
+    width: 130px;
+    right: 45%;
+    justify-content: center;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -77,13 +83,14 @@ ul.listcard{
 
 /* Style for the WhatsApp button */
 .whatsapp-button {
+   
     background-color: #5c2605; /* WhatsApp green color */
     color: #fff; /* White text color */
-    padding: 10px 20px;
-    margin-top: 50px;
+   
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -124,6 +131,7 @@ ul.listcard{
 }
 .active .card{
     left: calc(100% - 500px);
+    height: 100dvh;
 }
 .active .container{
     transform: translateX(-200px);
@@ -185,7 +193,8 @@ ul.listcard{
 }
 .listcard button{
     width: 30px;
-    background-color: #fff5;
+    background-color:white;
+    font-size: 20px;
     border: none;
 }
 .listcard .count{
@@ -202,6 +211,18 @@ ul.listcard{
         margin-top: 150px;
         
     }
+    div.center-container {
+        position:fixed;
+        bottom: 0;
+        left: 40%;
+        width: 130px;
+        right: 35%;
+        justify-content: center;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 10vh;
+    }
     .list .item{
         text-align: center;
         background-color: #dce0e1;
@@ -213,10 +234,8 @@ ul.listcard{
     .card{
         position: fixed;
         top: 0;
-        left:100%;
         width: 400px;
         background-color: #453E3B;
-        height: 100vh;
         transition: 0.5s;
     }
     .active .card{
@@ -236,6 +255,27 @@ ul.listcard{
         position: relative;
         text-align: right;
         margin-right: 70px;
+    }
+    div.center-container {
+        position:fixed;
+        bottom: 0;
+        left: 30%;
+        width: 130px;
+        right: 35%;
+        justify-content: center;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 10vh;
+    }
+    .whatsapp-button {
+        background-color: #5c2605; /* WhatsApp green color */
+        color: #fff; /* White text color */ 
+        margin-top: 2px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
     }
     .card{
         position: fixed;
